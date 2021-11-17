@@ -1,0 +1,31 @@
+name: uncertainty_guided_env
+channels:
+    - rdkit  
+    - pytorch
+    - anaconda
+    - conda-forge
+    - defaults
+dependencies:
+    - python=3.8
+    - pytorch=1.10.0
+    - torchvision=0.11.1 
+    - cudatoolkit=10.2
+    - rdkit=2020.09
+    - tqdm
+    - tensorboard
+    - numpy
+    - pandas
+    - matplotlib
+    - seaborn
+    - scikit-learn
+    - scipy
+    - pip
+    - typing
+    - networkx
+    - lazy
+    - docopt
+    - pip:
+      - guacamol
+      - fcd
+      - botorch
+      - func-timeout

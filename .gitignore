@@ -1,0 +1,9 @@
+JTVAE/__pycache__
+JTVAE/fast_jtnn/__pycache__/
+JTVAE/checkpoints/*
+!JTVAE/checkpoints/.gitkeep
+
+results/optimization/*
+!results/optimization/.gitkeep
+
+utils/__pycache__
