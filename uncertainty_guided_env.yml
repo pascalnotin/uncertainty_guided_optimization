@@ -10,7 +10,7 @@ dependencies:
     - pytorch=1.10.0
     - torchvision=0.11.1 
     - cudatoolkit=10.2
-    - rdkit=2020.09
+    - rdkit=2020.03
     - tqdm
     - tensorboard
     - numpy
@@ -25,7 +25,7 @@ dependencies:
     - lazy
     - docopt
     - pip:
-      - guacamol
-      - fcd
-      - botorch
-      - func-timeout
+      - guacamol==0.5.2
+      - fcd==1.1
+      - botorch==0.5.1
+      - func-timeout==4.3.5
