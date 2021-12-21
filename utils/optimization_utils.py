@@ -523,11 +523,11 @@ def gradient_ascent_optimization(model, starting_objects_latent_embeddings, numb
         else: #We compute uncertainty in batches starting from latest batch of points generated, and continue until we have reached the desired number of points below uncertainty threshold
             with torch.no_grad():
                 num_points_to_generate = number_starting_objects
-                point_index  = (number_gradient_steps+1)*number_starting_objects - 1
+                point_index  = (number_gradient_steps+1)*number_starting_objects + 1
                 selected_points=[]
                 while num_points_to_generate > 0:
                     if point_index>0:
-                        potential_points=all_points_latent_representation[min(point_index-batch_size,0):point_index].view(-1,hidden_dim).to(device)
+                        potential_points=all_points_latent_representation[max(point_index-batch_size,0):point_index].view(-1,hidden_dim).to(device)
                         uncertainty_potential_points = model.decoder_uncertainty_from_latent(
                                                                                             z = potential_points,
                                                                                             method = uncertainty_decoder_method,
